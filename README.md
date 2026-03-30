@@ -1,5 +1,8 @@
 # Project 1: Hosting a Static Website on Amazon S3
 
+## Website Link
+`http://cha-tutorials.s3-website-us-east-1.amazonaws.com`
+
 ## Project Overview
 This project demonstrates hands-on cloud computing by hosting a pre-built static website on Amazon S3. The repository contains the complete static website assets, including HTML, CSS, JavaScript, fonts, and images. The primary goal is to configure AWS S3 for static website hosting, upload the website content, and make the site publicly available using AWS best practices.
 
