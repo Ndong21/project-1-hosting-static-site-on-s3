@@ -61,6 +61,8 @@ Before hosting the site on AWS, ensure you have the following:
 7. Leave versioning and other advanced settings at defaults for this demo.
 8. Create the bucket.
 
+![Create S3 bucket](images/create-bucket.png)
+
 ### 2. Configure the bucket for static website hosting
 1. In the S3 console, open your new bucket.
 2. Select the **Properties** tab.
@@ -69,6 +71,8 @@ Before hosting the site on AWS, ensure you have the following:
 5. Set the **Index document** to `index.html`.
 6. Set the **Error document** to `index.html` or `error.html` if available.
 7. Save changes.
+
+![Enable static webhosting](images/enable-webhosting.png)
 
 ### 3. Set bucket policy for public read access
 1. Open the **Permissions** tab in the S3 bucket.
@@ -94,7 +98,6 @@ Before hosting the site on AWS, ensure you have the following:
 5. Save the bucket policy.
 
 ### 4. Upload the website files
-Option A: Upload through the AWS Console
 
 1. Open the **Objects** tab in the S3 bucket.
 2. Choose **Upload**.
@@ -102,15 +105,8 @@ Option A: Upload through the AWS Console
 4. Ensure the directory structure is preserved: `index.html`, `css/`, `js/`, `fonts/`, `images/`.
 5. Click **Upload**.
 
-Option B: Upload via AWS CLI
+![Add files to bucket](images/add-files-to-bucket.png)
 
-1. Install and configure the AWS CLI if not already done.
-2. Navigate to the repository root directory.
-3. Run the sync command:
-
-```bash
-aws s3 sync . s3://your-bucket-name --acl public-read --delete --exclude ".git/*"
-```
 
 4. Verify the files were synced correctly.
 
